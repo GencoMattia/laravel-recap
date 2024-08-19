@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('magic_cards', function (Blueprint $table) {
             $table->id();
             $table->string("name")->unique();
+            $table->string("type");
             $table->string("artist");
             $table->text("art_url");
             $table->text("description");
