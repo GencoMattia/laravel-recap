@@ -9,6 +9,6 @@ class CardColor extends Model
 {
     use HasFactory;
     public function magicCards(){
-        return $this->belongsToMany(MagicCard::class, 'cardcolor_magiccard');
+        return $this->belongsToMany(MagicCard::class, 'cardcolor_magiccard', 'cardcolor_id', 'magiccard_id');
     }
 }

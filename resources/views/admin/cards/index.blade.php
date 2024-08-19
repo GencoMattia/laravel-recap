@@ -26,6 +26,18 @@
                         </li>
                     </ul>
                     <div class="card-body">
+                        @if ($singleCard->cardColors->count() > 0)
+                            <p class="card-text"><b>Colors:</b></p>
+                            <ul class="list-group list-group-flush">
+                                @foreach ($singleCard->cardColors as $cardColor)
+                                    <li class="list-group-item">{{ $cardColor->name ?? $cardColor->color }}</li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <p class="card-text">No colors defined.</p>
+                        @endif
+                    </div>
+                    <div class="card-body">
                         <a href="#" class="card-link">Card link</a>
                     </div>
                 </div>
