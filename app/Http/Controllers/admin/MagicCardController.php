@@ -15,7 +15,7 @@ class MagicCardController extends Controller
     {
         //
         $magicCards = MagicCard::all();
-        return view("auth.admin.cards.index", compact($magicCards));
+        return view("admin.cards.index", compact("magicCards"));
     }
 
     /**
