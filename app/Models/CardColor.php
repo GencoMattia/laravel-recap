@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CardColor extends Model
 {
     use HasFactory;
+    public function magicCards(){
+        return $this->belongsToMany(MagicCard::class, 'cardcolor_magiccard');
+    }
 }
