@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('card_colors', function (Blueprint $table) {
             $table->id();
             $table->string("color");
+            $table->string("name")->nullable();
             $table->timestamps();
         });
     }
